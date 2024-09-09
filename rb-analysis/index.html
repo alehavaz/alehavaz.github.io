@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title></title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<style>
+	html, body {margin:0;padding:0;direction:rtl;}
+	body {
+		background: #f5f5f5;
+		font-family: Vazirmatn, sans-serif;
+	}
+	@media (min-width: 768px) {
+		.right-col {
+			padding: .5rem .5rem .5rem 1rem !important;
+		}
+	}
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.output-btn').click(function() {
+
+			const upperText = "سلام. ازت بابت آنالیز داده های مالی شرکت، پیش بینی تولید در سال آینده و میزان سرمایه در گردش لازم برای سال آینده کمک میخوام. این پیش بینی ها باید دقیق و بصورت عددی باشند. همچنین راهکارها و بایدها و نبایدها را برای بهبود و بازدهی بیشتر بصورت دقیق و عددی توضیح داده شود. داده های ورودی من: "
+
+			const downText = "داده های حال حاضر: موجودی مواد اولیه:  " + $('#two').val() + " ریال. موجودی کالای در دست ساخت:  " + $('#three').val() + " ریال. موجودی کالای نهایی:  " + $('#four').val() + " ریال. هزینه انبار و ذخیره سازی:  " + $('#five').val() + " ریال. هزینه عملیاتی سالیانه (شامل هزینه پرسنل، مواد اولیه و...):  " + $('#six').val() + " ریال. هزینه های توسعه و تحقیق:  " + $('#seven').val() + " ریال. هزینه های تعمیر و نگهداری:  " + $('#eight').val() + " ریال. سرمایه در گردش فعلی:  " + $('#nine').val() + " ریال. نقدینگی موجود:  " + $('#ten').val() + " ریال."
+
+			const num402 = $('#yek-1').value !== "" && $('#yek-1').val() > 3
+				? "برای سال 1403 تا الان: ارزش موجودی مواد اولیه: " + $('#yek-1').val() + " ریال. ارزش موجودی کالای در دست ساخت: " + $('#yek-2').val() + " ریال. ارزش موجودی مواد ساخته شده: " + $('#yek-3').val() + " ریال. میزان فروش سالانه:  " + $('#yek-4').val() + " ریال. تعداد پرسنل خط تولید:  " + $('#yek-5').val() + " . تعداد شیفت خط تولید:  " + $('#yek-6').val() + " . حساب های دریافتنی (فروش های نسیه):  " + $('#yek-7').val() + " ریال. حساب های پرداختنی (بدهی ها):  " + $('#yek-8').val() + " ریال."
+				: "";
+
+			const num401 = $('#do-1').value !== "" && $('#do-1').val() > 3
+				? "برای سال 1402: ارزش موجودی مواد اولیه:  " + $('#do-1').val() + " ریال. ارزش موجودی کالای در دست ساخت:  " + $('#do-2').val() + " ریال. ارزش موجودی مواد ساخته شده:  " + $('#do-3').val() + " ریال. میزان فروش سالانه:  " + $('#do-4').val() + " ریال. تعداد پرسنل خط تولید:  " + $('#do-5').val() + " . تعداد شیفت خط تولید:  " + $('#do-6').val() + " . حساب های دریافتنی (فروش های نسیه):  " + $('#do-7').val() + " ریال. حساب های پرداختنی (بدهی ها):  " + $('#do-8').val() + " ریال. "
+				: "";
+				
+			const num400 = $('#se-1').value !== "" && $('#se-1').val() > 3
+				? "برای سال 1401: ارزش موجودی مواد اولیه:  " + $('#se-1').val() + " ریال. ارزش موجودی کالای در دست ساخت:  " + $('#se-2').val() + " ریال. ارزش موجودی مواد ساخته شده:  " + $('#se-3').val() + " ریال. میزان فروش سالانه:  " + $('#se-4').val() + " ریال. تعداد پرسنل خط تولید:  " + $('#se-5').val() + " . تعداد شیفت خط تولید:  " + $('#se-6').val() + " . حساب های دریافتنی (فروش های نسیه):  " + $('#se-7').val() + " ریال. حساب های پرداختنی (بدهی ها):  " + $('#se-8').val() + " ریال. "
+				: "";
+				
+			const num399 = $('#chahar-1').value !== "" && $('#chahar-1').val() > 3
+				? "برای سال 1400: ارزش موجودی مواد اولیه:  " + $('#chahar-1').val() + " ریال. ارزش موجودی کالای در دست ساخت:  " + $('#chahar-2').val() + " ریال. ارزش موجودی مواد ساخته شده:  " + $('#chahar-3').val() + " ریال. میزان فروش سالانه:  " + $('#chahar-4').val() + " ریال. تعداد پرسنل خط تولید:  " + $('#chahar-5').val() + " . تعداد شیفت خط تولید:  " + $('#chahar-6').val() + " . حساب های دریافتنی (فروش های نسیه):  " + $('#chahar-7').val() + " ریال. حساب های پرداختنی (بدهی ها):  " + $('#chahar-8').val() + " ریال. "
+				: "";
+				
+			const num398= $('#panj-1').value !== "" && $('#panj-1').val() > 3
+				? "برای سال 1399: ارزش موجودی مواد اولیه:  " + $('#panj-1').val() + " ریال. ارزش موجودی کالای در دست ساخت:  " + $('#panj-2').val() + " ریال. ارزش موجودی مواد ساخته شده:  " + $('#panj-3').val() + " ریال. میزان فروش سالانه:  " + $('#panj-4').val() + " ریال. تعداد پرسنل خط تولید:  " + $('#panj-5').val() + " . تعداد شیفت خط تولید:  " + $('#panj-6').val() + " . حساب های دریافتنی (فروش های نسیه):  " + $('#panj-7').val() + " ریال. حساب های پرداختنی (بدهی ها):  " + $('#panj-8').val() + " ریال. "
+				: "";
+
+			const outputText = upperText + num402 + num401 + num400 + num399 + num398 + downText;
+
+
+			$('#output-box').val(outputText);
+		});
+	});
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+	<div class="row py-4">
+		
+	<div class="col col-md-9 col-sm-12 col-xs-12 right-col">
+		<div class="">
+		
+		<div class="" style="direction: ltr">
+			<button type="submit" id="output-btn" class="btn btn-primary mb-3 output-btn">اعمال تغییرات</button>
+		</div>
+		
+		<div class="mb-2" style="border-bottom: 1px solid #aaa;">
+			<table class="table">
+			  <thead>
+				<tr>
+				  <th scope="col"> </th>
+				  <th scope="col" class="text-center">1403-الان</th>
+				  <th scope="col" class="text-center">1402</th>
+				  <th scope="col" class="text-center">1401</th>
+				  <th scope="col" class="text-center">1400</th>
+				  <th scope="col" class="text-center">1399</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <th scope="row">ارزش موجودی مواد اولیه</th>
+				  <td><input type="text" class="form-control" id="yek-1" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="do-1" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="se-1" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="chahar-1" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="panj-1" placeholder=""></td>
+				</tr>
+				
+				<tr>
+				  <th scope="row">ارزش موجودی کالای در دست ساخت</th>
+				  <td><input type="text" class="form-control" id="yek-2" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="do-2" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="se-2" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="chahar-2" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="panj-2" placeholder=""></td>
+				</tr>
+				
+				<tr>
+				  <th scope="row">ارزش موجودی مواد ساخته شده</th>
+				  <td><input type="text" class="form-control" id="yek-3" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="do-3" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="se-3" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="chahar-3" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="panj-3" placeholder=""></td>
+				</tr>
+				
+				<tr>
+				  <th scope="row">میزان فروش سالانه</th>
+				  <td><input type="text" class="form-control" id="yek-4" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="do-4" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="se-4" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="chahar-4" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="panj-4" placeholder=""></td>
+				</tr>
+				
+				<tr>
+				  <th scope="row">تعداد پرسنل خط تولید</th>
+				  <td><input type="text" class="form-control" id="yek-5" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="do-5" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="se-5" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="chahar-5" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="panj-5" placeholder=""></td>
+				</tr>
+				
+				<tr>
+				  <th scope="row">تعداد شیفت خط تولید</th>
+				  <td><input type="text" class="form-control" id="yek-6" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="do-6" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="se-6" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="chahar-6" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="panj-6" placeholder=""></td>
+				</tr>
+				
+				<tr>
+				  <th scope="row">حساب های دریافتنی(فروش نسیه)</th>
+				  <td><input type="text" class="form-control" id="yek-7" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="do-7" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="se-7" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="chahar-7" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="panj-7" placeholder=""></td>
+				</tr>
+				
+				<tr>
+				  <th scope="row">حساب های پرداختی (بدهی ها)</th>
+				  <td><input type="text" class="form-control" id="yek-8" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="do-8" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="se-8" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="chahar-8" placeholder=""></td>
+				  <td><input type="text" class="form-control" id="panj-8" placeholder=""></td>
+				</tr>
+				
+			  </tbody>
+			</table>
+			</div>
+
+			<div class="row">
+				
+				<fieldset class="my-2">
+	              <legend>موجودی ها</legend>
+	            </fieldset>
+
+					<div class="col-md-6 col-sm-12">
+						<div class="input-group mb-3">
+				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">موجودی مواد اولیه</span>
+
+				          <input type="text" id="two" class="form-control" placeholder="ریال" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
+				        </div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="input-group mb-3">
+				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">موجودی کالای در دست ساخت</span>
+
+				          <input type="text" id="three" class="form-control" placeholder="ریال" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
+				        </div>
+					</div>
+				</div>
+
+			<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="input-group mb-3">
+				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">موجودی کالای نهایی</span>
+
+				          <input type="text" id="four" class="form-control" placeholder="ریال" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
+				        </div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="input-group mb-3">
+				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">هزینه انبار و ذخیره سازی</span>
+
+				          <input type="text" id="five" class="form-control" placeholder="ریال در سال" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
+				        </div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<div class="input-group mb-3">
+				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">هزینه عملیاتی سالیانه</span>
+
+				          <input type="text" id="six" class="form-control" placeholder="شامل هزینه پرسنل، مواد اولیه و سایر هزینه های متغیر" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
+				        </div>
+					</div>
+				</div>
+
+				<div class="row">
+					<fieldset class="my-2">
+		              <legend>هزینه ها</legend>
+		            </fieldset>
+
+					<div class="col-md-6 col-sm-12">
+						<div class="input-group mb-3">
+				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">هزینه های توسعه و تحقیق</span>
+
+				          <input type="text" id="seven" class="form-control" placeholder="ریال در سال" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
+				        </div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="input-group mb-3">
+				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">هزینه های تعمیر و نگهداری</span>
+
+				          <input type="text" id="eight" class="form-control" placeholder="ریال در سال" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
+				        </div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<fieldset class="my-2">
+		              <legend>داده های مالی</legend>
+		            </fieldset>
+
+					<div class="col-md-6 col-sm-12">
+						<div class="input-group mb-3">
+				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">سرمایه در گردش فعلی</span>
+
+				          <input type="text" id="nine" class="form-control" placeholder="ریال" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
+				        </div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="input-group mb-3">
+				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">نقدینگی موجود</span>
+
+				          <input type="text" id="ten" class="form-control" placeholder="شامل وجوه نقدی + بدهی ها + نسیه ها" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
+				        </div>
+					</div>
+				</div>
+
+
+			</div>
+		
+	</div>
+	
+	
+	<div class="col col-md-3 col-sm-12 p-2 bg-white">
+		<textarea class="form-control" id="output-box" style="min-height: 90dvh;" placeholder="خروجی"></textarea>
+	</div>
+		
+	</div>
+
+</div>
+
+</body>
+
+</html>
