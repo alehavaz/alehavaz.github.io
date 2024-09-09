@@ -28,7 +28,7 @@
 
 			const upperText = "سلام. ازت بابت آنالیز داده های مالی شرکت، پیش بینی تولید در سال آینده و میزان سرمایه در گردش لازم برای سال آینده یعنی 1404 کمک میخوام. این پیش بینی ها باید دقیق و بصورت عددی باشند. همچنین راهکارها و بایدها و نبایدها را برای بهبود و بازدهی بیشتر بصورت دقیق و عددی توضیح داده شود. داده های ورودی من: "
 
-			const downText = "داده های حال حاضر: موجودی مواد اولیه:  " + $('#two').val() + " ریال. موجودی کالای در دست ساخت:  " + $('#three').val() + " ریال. موجودی کالای نهایی:  " + $('#four').val() + " ریال. هزینه انبار و ذخیره سازی:  " + $('#five').val() + " ریال. هزینه عملیاتی سالیانه (شامل هزینه پرسنل، مواد اولیه و...):  " + $('#six').val() + " ریال. هزینه های توسعه و تحقیق:  " + $('#seven').val() + " ریال. هزینه های تعمیر و نگهداری:  " + $('#eight').val() + " ریال. سرمایه در گردش فعلی:  " + $('#nine').val() + " ریال. نقدینگی موجود:  " + $('#ten').val() + " ریال."
+			const downText = "داده های حال حاضر: هزینه انبار و ذخیره سازی:  " + $('#five').val() + " ریال. هزینه عملیاتی سالیانه (شامل هزینه پرسنل، مواد اولیه و...):  " + $('#six').val() + " ریال. هزینه های توسعه و تحقیق:  " + $('#seven').val() + " ریال. هزینه های تعمیر و نگهداری:  " + $('#eight').val() + " ریال. سرمایه در گردش فعلی:  " + $('#nine').val() + " ریال. نقدینگی موجود:  " + $('#ten').val() + " ریال."
 
 			const num402 = $('#yek-1').value !== "" && $('#yek-1').val() > 3
 				? "برای سال 1403 تا الان: ارزش موجودی مواد اولیه: " + $('#yek-1').val() + " ریال. ارزش موجودی کالای در دست ساخت: " + $('#yek-2').val() + " ریال. ارزش موجودی مواد ساخته شده: " + $('#yek-3').val() + " ریال. میزان فروش سالانه:  " + $('#yek-4').val() + " ریال. تعداد پرسنل خط تولید:  " + $('#yek-5').val() + " . تعداد شیفت خط تولید:  " + $('#yek-6').val() + " . حساب های دریافتنی (فروش های نسیه):  " + $('#yek-7').val() + " ریال. حساب های پرداختنی (بدهی ها):  " + $('#yek-8').val() + " ریال."
@@ -165,34 +165,12 @@
 			<div class="row">
 				
 				<fieldset class="my-2">
-	              <legend>موجودی ها</legend>
+	              <legend>هزینه ها</legend>
 	            </fieldset>
-
-					<div class="col-md-6 col-sm-12">
-						<div class="input-group mb-3">
-				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">موجودی مواد اولیه</span>
-
-				          <input type="text" id="two" class="form-control" placeholder="ریال" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
-				        </div>
-					</div>
-					<div class="col-md-6 col-sm-12">
-						<div class="input-group mb-3">
-				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">موجودی کالای در دست ساخت</span>
-
-				          <input type="text" id="three" class="form-control" placeholder="ریال" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
-				        </div>
-					</div>
 				</div>
 
 			<div class="row">
-					<div class="col-md-6 col-sm-12">
-						<div class="input-group mb-3">
-				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">موجودی کالای نهایی</span>
-
-				          <input type="text" id="four" class="form-control" placeholder="ریال" aria-describedby="basic-addon2" style="border-radius: .25rem 0 0 .25rem;margin: 0 -1px 0 0;">
-				        </div>
-					</div>
-					<div class="col-md-6 col-sm-12">
+					<div class="col">
 						<div class="input-group mb-3">
 				          <span class="input-group-text" id="basic-addon2" style="border-radius:0 .25rem .25rem 0;">هزینه انبار و ذخیره سازی</span>
 
@@ -212,9 +190,6 @@
 				</div>
 
 				<div class="row">
-					<fieldset class="my-2">
-		              <legend>هزینه ها</legend>
-		            </fieldset>
 
 					<div class="col-md-6 col-sm-12">
 						<div class="input-group mb-3">
